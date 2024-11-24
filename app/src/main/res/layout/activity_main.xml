@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/backgroundcolor"
+    android:paddingVertical="2dp"
+    android:paddingHorizontal="14dp"
+    >
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:layout_marginTop="276dp"
+        app:cardBackgroundColor="@color/TitleBackground"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="helvetica"
+                android:text="@string/calcula_tu_salario"
+                android:textColor="@color/TextColor"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSalary"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        app:cardBackgroundColor="@color/BgOptions"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@id/cvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="7dp"
+        android:padding="18dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            >
+
+            <TextView
+                android:id="@+id/tvIntroSal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="helvetica"
+                android:text="@string/introduce_tu_salario_bruto_anual"
+                android:textColor="@color/TextColor"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/etSalary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="@string/_0_v2"
+                android:textColor="@color/TextColor"
+                android:textColorHint="#dad7cd"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"
+                android:padding="9dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvPagas"
+        android:layout_width="272dp"
+        android:layout_height="120dp"
+        app:cardBackgroundColor="@color/BgOptions"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@id/cvSalary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="7dp"
+        android:padding="18dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            >
+
+            <TextView
+                android:id="@+id/tvPagas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="helvetica"
+                android:text="@string/n_mero_de_pagas"
+                android:textColor="@color/TextColor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvNumPagas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:text="12" />
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/rsHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="1"
+                android:valueFrom="12"
+                android:valueTo="16" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvHijos"
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="8dp"
+        app:cardBackgroundColor="@color/BgOptions"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvPagas">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:padding="3dp"
+                android:text="@string/hijos"
+                android:textColor="@color/TextColor" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_child_friendly_24" />
+
+            <EditText
+                android:id="@+id/etKids"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="@string/_0_v3"
+                android:inputType="numberDecimal"
+                android:padding="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/TextColor"
+                android:textColorHint="#dad7cd"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvEdad"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        app:cardBackgroundColor="@color/BgOptions"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/cvPagas"
+        app:layout_constraintStart_toEndOf="@id/cvHijos"
+        app:layout_constraintBottom_toTopOf="@id/cvEstadoCiv"
+        android:layout_margin="34dp">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:padding="3dp"
+                android:text="@string/edad"
+                android:textColor="@color/TextColor" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_calendar_month_24" />
+
+            <EditText
+                android:id="@+id/etAge"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="@string/_16"
+                android:inputType="numberDecimal"
+                android:padding="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/TextColor"
+                android:textColorHint="#dad7cd"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDisc"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="8dp"
+        app:cardBackgroundColor="@color/BgOptions"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvPagas">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:padding="3dp"
+                android:text="@string/discapacidad"
+                android:textColor="@color/TextColor" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_accessible_forward_24" />
+
+            <EditText
+                android:id="@+id/etDisc"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="@string/percentage"
+                android:inputType="numberDecimal"
+                android:padding="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/TextColor"
+                android:textColorHint="#dad7cd"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvEstadoCiv"
+        android:layout_width="272dp"
+        android:layout_height="80dp"
+        app:cardBackgroundColor="@color/BgOptions"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@id/cvHijos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="7dp"
+        android:padding="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="4dp"
+            >
+
+            <TextView
+                android:id="@+id/tvEstadoCivil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="helvetica"
+                android:text="@string/estado_civil_v2"
+                android:textColor="@color/TextColor"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/etEstadoCivil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="@string/casado_soltero"
+                android:textColor="@color/TextColor"
+                android:textColorHint="#dad7cd"
+                android:textSize="18sp"
+                android:layout_marginBottom="4dp"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvGruPro"
+        android:layout_width="272dp"
+        android:layout_height="80dp"
+        app:cardBackgroundColor="@color/BgOptions"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@id/cvEstadoCiv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="7dp"
+        android:padding="18dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="4dp"
+            >
+
+            <TextView
+                android:id="@+id/tvGruPro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Grupo Profesional"
+                android:fontFamily="helvetica"
+                android:textColor="@color/TextColor"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/etGrupoProfesional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="@string/licenciado_ingeniero"
+                android:textColor="@color/TextColor"
+                android:textColorHint="#dad7cd"
+                android:textSize="18sp"
+                android:layout_marginBottom="4dp"
+                android:padding="8dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/goButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_margin="24dp"
+        android:text="Calcular"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvGruPro"
+        app:backgroundTint="#BC4749" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

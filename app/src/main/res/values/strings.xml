@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">CalculadoraDavidAlada</string>
+    <string name="calcula_tu_salario">CALCULA TU SALARIO</string>
+    <string name="introduce_tu_salario_bruto_anual">Introduce tu salario bruto anual</string>
+    <string name="_0">0 &#8364;</string>
+    <string name="introduce_tu_salario">Introduce tu salario</string>
+    <string name="_0_v2">0 €</string>
+    <string name="_12">12</string>
+    <string name="n_mero_de_pagas">Número de pagas</string>
+    <string name="estado_civil">Estado civil</string>
+    <string name="hijos">Hijos</string>
+    <string name="edad">Edad</string>
+    <string name="_0_v3">0</string>
+    <string name="_16">16</string>
+    <string name="estado_civil_v2">Estado civil</string>
+    <string name="casado_soltero">Casado, soltero...</string>
+    <string name="licenciado_ingeniero">Licenciado, ingeniero...</string>
+    <string name="discapacidad">Discapacidad</string>
+    <string name="percentage">%</string>
+
+
+</resources>
